@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">AndroidCodingChallenge</string>
+    <string name="gravatar_description">Displays user\'s gravatar</string>
+    <string name="gold">Gold:</string>
+    <string name="silver">Silver:</string>
+    <string name="bronze">Bronze:</string>
 </resources>

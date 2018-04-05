@@ -1,4 +1,9 @@
 package com.example.chris.androidcodingchallenge;
 
-public class MainPresenter {
+public interface MainPresenter {
+
+
+    void onResume();
+
+
 }
