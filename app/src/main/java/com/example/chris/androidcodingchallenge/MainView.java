@@ -4,5 +4,5 @@ import java.util.List;
 
 public interface MainView{
 
-    void setItems(List<User> items);
+    void logException(String message);
 }

@@ -2,6 +2,9 @@ package com.example.chris.androidcodingchallenge;
 
 
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
@@ -24,6 +27,16 @@ public class RemoteDataSourceImpl implements RemoteDataSource{
     public List<User> createUserList() throws IOException {
         String response = getResponse("https://api.stackexchange.com/2.2/users?site=stackoverflow&filter=!40DELOJ-U(i)MAuGy");
         return parseResponse(response);
+    }
+
+    @Override
+    public Bitmap getBitmapFromUrl(String urlName) throws  IOException {
+        URL url = new URL(urlName);
+        HttpsURLConnection connection = (HttpsURLConnection) url.openConnection();
+        connection.setDoInput(true);
+        connection.connect();
+        InputStream input = connection.getInputStream();
+        return BitmapFactory.decodeStream(input);
     }
 
     private String getResponse(String urlName)throws IOException{
