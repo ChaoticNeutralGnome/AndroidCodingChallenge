@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     style="@style/AppTheme"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -59,12 +60,13 @@
                     android:gravity="bottom"
                     android:orientation="horizontal">
 
-                    <TextView
-                        android:id="@+id/bronze_text"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                    <ImageView
+                        android:id="@+id/bronzeView"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
                         android:layout_weight="1"
-                        android:text="@string/bronze" />
+                        android:contentDescription="@string/bronze_description"
+                        app:srcCompat="@drawable/bronze" />
 
                     <TextView
                         android:id="@+id/bronze_number"
@@ -72,12 +74,13 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1" />
 
-                    <TextView
-                        android:id="@+id/silver_text"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                    <ImageView
+                        android:id="@+id/silverView"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
                         android:layout_weight="1"
-                        android:text="@string/silver" />
+                        android:contentDescription="@string/silver_description"
+                        app:srcCompat="@drawable/silver" />
 
                     <TextView
                         android:id="@+id/silver_number"
@@ -85,13 +88,13 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1" />
 
-                    <TextView
-                        android:id="@+id/gold_text"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="bottom"
+                    <ImageView
+                        android:id="@+id/goldView"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
                         android:layout_weight="1"
-                        android:text="@string/gold" />
+                        android:contentDescription="@string/gold_description"
+                        app:srcCompat="@drawable/gold" />
 
                     <TextView
                         android:id="@+id/gold_number"

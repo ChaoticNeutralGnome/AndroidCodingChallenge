@@ -57,10 +57,12 @@ public class UserAdapter extends  RecyclerView.Adapter<UserAdapter.UserViewHolde
         }
 
 
+        @Override
         public void setUsername(String username) {
             usernameView.setText(username);
         }
 
+        @Override
         public void setGravatar(Bitmap image) {
             gravatarView.setImageBitmap(image);
             if(image!=null) {
@@ -68,6 +70,7 @@ public class UserAdapter extends  RecyclerView.Adapter<UserAdapter.UserViewHolde
             }
         }
 
+        @Override
         public void setBadges(int bronze, int silver, int gold) {
             bronzeView.setText(String.valueOf(bronze));
             silverView.setText(String.valueOf(silver));

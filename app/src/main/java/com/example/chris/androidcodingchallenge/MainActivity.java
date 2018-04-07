@@ -11,6 +11,7 @@ import android.util.Log;
 
 
 public class MainActivity extends AppCompatActivity implements MainView {
+    RecyclerView rv;
     private MainPresenter mainPresenter;
 
     @Override
@@ -28,10 +29,16 @@ public class MainActivity extends AppCompatActivity implements MainView {
     }
 
 
-
     @Override
     public void logException(String message) {
-        messageBox(message);
+        Log.d("EXCEPTION: ",  message);
+
+        AlertDialog.Builder messageBox = new AlertDialog.Builder(this);
+        messageBox.setTitle("Exception");
+        messageBox.setMessage(message);
+        messageBox.setCancelable(false);
+        messageBox.setNeutralButton("OK", null);
+        messageBox.show();
     }
 
 
@@ -43,15 +50,4 @@ public class MainActivity extends AppCompatActivity implements MainView {
         rv.setAdapter(mainPresenter.getAdapter());
     }
 
-    private void messageBox(String message)
-    {
-        Log.d("EXCEPTION: ",  message);
-
-        AlertDialog.Builder messageBox = new AlertDialog.Builder(this);
-        messageBox.setTitle("Exception");
-        messageBox.setMessage(message);
-        messageBox.setCancelable(false);
-        messageBox.setNeutralButton("OK", null);
-        messageBox.show();
-    }
 }
