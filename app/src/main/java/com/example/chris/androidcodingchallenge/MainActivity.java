@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity implements MainView {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mainPresenter = new MainPresenterImpl(this, new RemoteDataSourceImpl(), new LocalDataSourceImpl());
+        mainPresenter = new MainPresenterImpl(this, new RemoteDataSourceImpl(), new LocalDataSourceImpl(this));
         initializeView();
     }
 
