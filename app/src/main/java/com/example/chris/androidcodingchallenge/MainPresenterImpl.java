@@ -117,7 +117,12 @@ public class MainPresenterImpl implements MainPresenter {
         @Override
         protected Void doInBackground(Void... voids) {
             try {
-                this.image = rds.getBitmapFromUrl(url);
+                if(lds.containsImage(url)){
+                    this.image = lds.getImage(url);
+                }
+                else {
+                    this.image = rds.getBitmapFromUrl(url);
+                }
             }
             catch(IOException e){
                 this.exception = e.getMessage();

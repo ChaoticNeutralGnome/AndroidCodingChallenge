@@ -19,9 +19,5 @@ public class User {
         this.gravatar = null;
     }
 
-    String getGravatarUrl(){
-        return this.gravatarUrl;
-    }
-
 }
 
