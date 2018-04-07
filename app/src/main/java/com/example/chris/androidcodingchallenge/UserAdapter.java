@@ -14,7 +14,7 @@ import android.widget.TextView;
 
 public class UserAdapter extends  RecyclerView.Adapter<UserAdapter.UserViewHolder>{
 
-    private MainPresenter presenter;
+    private final MainPresenter presenter;
 
     public UserAdapter(MainPresenter presenter){
         this.presenter = presenter;
@@ -39,11 +39,14 @@ public class UserAdapter extends  RecyclerView.Adapter<UserAdapter.UserViewHolde
     }
 
     class UserViewHolder extends RecyclerView.ViewHolder implements UserRowView{
-        ImageView gravatarView;
-        TextView usernameView, bronzeView, silverView, goldView;
-        ProgressBar loadingBar;
+        final ImageView gravatarView;
+        final TextView usernameView;
+        final TextView bronzeView;
+        final TextView silverView;
+        final TextView goldView;
+        final ProgressBar loadingBar;
 
-        public UserViewHolder(View itemView) {
+        UserViewHolder(View itemView) {
             super(itemView);
             gravatarView = itemView.findViewById(R.id.gravatarView);
             usernameView = itemView.findViewById(R.id.usernameView);
@@ -54,12 +57,10 @@ public class UserAdapter extends  RecyclerView.Adapter<UserAdapter.UserViewHolde
         }
 
 
-        @Override
         public void setUsername(String username) {
             usernameView.setText(username);
         }
 
-        @Override
         public void setGravatar(Bitmap image) {
             gravatarView.setImageBitmap(image);
             if(image!=null) {
@@ -67,7 +68,6 @@ public class UserAdapter extends  RecyclerView.Adapter<UserAdapter.UserViewHolde
             }
         }
 
-        @Override
         public void setBadges(int bronze, int silver, int gold) {
             bronzeView.setText(String.valueOf(bronze));
             silverView.setText(String.valueOf(silver));

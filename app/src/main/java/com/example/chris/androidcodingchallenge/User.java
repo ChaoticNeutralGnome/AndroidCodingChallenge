@@ -3,11 +3,13 @@ package com.example.chris.androidcodingchallenge;
 
 import android.graphics.Bitmap;
 
-public class User {
+class User {
 
-    String gravatarUrl;
-    String username;
-    int bronze, silver, gold;
+    final String gravatarUrl;
+    final String username;
+    final int bronze;
+    final int silver;
+    final int gold;
     Bitmap gravatar;
 
     User(String gravatarUrl, String username, int bronze, int silver, int gold){

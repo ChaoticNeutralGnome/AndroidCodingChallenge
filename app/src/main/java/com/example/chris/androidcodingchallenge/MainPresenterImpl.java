@@ -9,10 +9,10 @@ import java.util.List;
 
 public class MainPresenterImpl implements MainPresenter {
 
-    private MainView mainView;
-    private RemoteDataSource remoteDataSource;
-    private LocalDataSource localDataSource;
-    private UserAdapter userAdapter;
+    private final MainView mainView;
+    private final RemoteDataSource remoteDataSource;
+    private final LocalDataSource localDataSource;
+    private final UserAdapter userAdapter;
 
     private List<User> users;
 
@@ -67,9 +67,9 @@ public class MainPresenterImpl implements MainPresenter {
 
         private String exception;
         private List<User> value;
-        private RemoteDataSource rds;
+        private final RemoteDataSource rds;
 
-        public FetchUsers(RemoteDataSource rds){
+        FetchUsers(RemoteDataSource rds){
             super();
             this.rds = rds;
         }
@@ -99,14 +99,14 @@ public class MainPresenterImpl implements MainPresenter {
     private class FetchImage extends AsyncTask<Void, Void, Void> {
 
         private String exception;
-        private RemoteDataSource rds;
-        private LocalDataSource lds;
-        private int index;
+        private final RemoteDataSource rds;
+        private final LocalDataSource lds;
+        private final int index;
         private Bitmap image;
-        private String url;
+        private final String url;
 
 
-        public FetchImage(String url, int index, RemoteDataSource rds, LocalDataSource lds){
+        FetchImage(String url, int index, RemoteDataSource rds, LocalDataSource lds){
             super();
             this.url = url;
             this.index = index;

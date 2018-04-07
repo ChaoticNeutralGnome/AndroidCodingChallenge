@@ -1,7 +1,7 @@
 package com.example.chris.androidcodingchallenge;
 
 
-public interface MainView{
+interface MainView{
 
     void logException(String message);
 }

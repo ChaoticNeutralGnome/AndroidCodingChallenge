@@ -1,7 +1,7 @@
 package com.example.chris.androidcodingchallenge;
 
 
-public interface MainPresenter {
+interface MainPresenter {
 
 
     void onResume();

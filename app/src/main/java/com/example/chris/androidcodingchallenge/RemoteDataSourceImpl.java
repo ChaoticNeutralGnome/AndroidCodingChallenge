@@ -25,7 +25,7 @@ public class RemoteDataSourceImpl implements RemoteDataSource{
 
     @Override
     public List<User> createUserList() throws IOException {
-        String response = getResponse("https://api.stackexchange.com/2.2/users?site=stackoverflow&filter=!40DELOJ-U(i)MAuGy");
+        String response = getResponse();
         return parseResponse(response);
     }
 
@@ -39,8 +39,8 @@ public class RemoteDataSourceImpl implements RemoteDataSource{
         return BitmapFactory.decodeStream(input);
     }
 
-    private String getResponse(String urlName)throws IOException{
-        URL url = new URL(urlName);
+    private String getResponse()throws IOException{
+        URL url = new URL("https://api.stackexchange.com/2.2/users?site=stackoverflow&filter=!40DELOJ-U(i)MAuGy");
         HttpsURLConnection conn = (HttpsURLConnection) url.openConnection();
         conn.setRequestMethod("GET");
         conn.setRequestProperty("Content-Type", "application/json");

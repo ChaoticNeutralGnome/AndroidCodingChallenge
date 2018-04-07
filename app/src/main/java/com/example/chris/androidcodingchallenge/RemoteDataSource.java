@@ -6,7 +6,7 @@ import android.graphics.Bitmap;
 import java.io.IOException;
 import java.util.List;
 
-public interface RemoteDataSource {
+interface RemoteDataSource {
 
     List<User> createUserList() throws IOException;
 

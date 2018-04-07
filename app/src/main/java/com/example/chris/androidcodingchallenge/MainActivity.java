@@ -11,7 +11,6 @@ import android.util.Log;
 
 
 public class MainActivity extends AppCompatActivity implements MainView {
-    RecyclerView rv;
     private MainPresenter mainPresenter;
 
     @Override

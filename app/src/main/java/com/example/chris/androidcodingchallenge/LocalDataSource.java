@@ -2,7 +2,7 @@ package com.example.chris.androidcodingchallenge;
 
 import android.graphics.Bitmap;
 
-public interface LocalDataSource {
+interface LocalDataSource {
 
     void addImage(String key, Bitmap value);
 
