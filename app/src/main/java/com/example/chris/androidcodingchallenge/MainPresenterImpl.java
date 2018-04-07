@@ -1,5 +1,6 @@
 package com.example.chris.androidcodingchallenge;
 
+import android.annotation.SuppressLint;
 import android.graphics.Bitmap;
 import android.os.AsyncTask;
 
@@ -63,6 +64,7 @@ public class MainPresenterImpl implements MainPresenter {
     }
 
 
+    @SuppressLint("StaticFieldLeak")
     private class FetchUsers extends AsyncTask<Void, Void, Void> {
 
         private String exception;
@@ -96,6 +98,7 @@ public class MainPresenterImpl implements MainPresenter {
         }
     }
 
+    @SuppressLint("StaticFieldLeak")
     private class FetchImage extends AsyncTask<Void, Void, Void> {
 
         private String exception;

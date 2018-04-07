@@ -7,7 +7,6 @@
     android:padding="2dp">
 
     <android.support.v7.widget.CardView
-        android:id="@+id/cv"
         style="@style/CardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -46,7 +45,7 @@
                 android:layout_width="267dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="16dp"
-                android:gravity="left"
+                android:gravity="start"
                 android:orientation="vertical">
 
                 <TextView
@@ -61,7 +60,6 @@
                     android:orientation="horizontal">
 
                     <ImageView
-                        android:id="@+id/bronzeView"
                         android:layout_width="15dp"
                         android:layout_height="15dp"
                         android:layout_weight="1"
@@ -75,7 +73,6 @@
                         android:layout_weight="1" />
 
                     <ImageView
-                        android:id="@+id/silverView"
                         android:layout_width="15dp"
                         android:layout_height="15dp"
                         android:layout_weight="1"
@@ -89,7 +86,6 @@
                         android:layout_weight="1" />
 
                     <ImageView
-                        android:id="@+id/goldView"
                         android:layout_width="15dp"
                         android:layout_height="15dp"
                         android:layout_weight="1"
